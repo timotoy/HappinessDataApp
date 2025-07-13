@@ -5,6 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title="CompareCountries")
 
 st.header("Compare Countries")
+st.text("Tak poprvýkrát som v kúte")
 
 df = pd.read_csv("happy.csv")
 
