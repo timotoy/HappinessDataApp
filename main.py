@@ -15,20 +15,8 @@ selectables = ["Happiness", "GDP", "Social support", "Life expectancy",
 horizontal = st.selectbox("Select horizontal axis", selectables)
 vertical = st.selectbox("Select vertical axis", selectables)
 
-def get_x():
-    for selectable in selectables:
-        if selectable == horizontal:
-            chosen_horizontal = selectable.replace(" ", "_").lower()
-    return chosen_horizontal
-
-def get_y():
-    for selectable in selectables:
-        if selectable == vertical:
-            chosen_vertical = selectable.replace(" ", "_").lower()
-    return chosen_vertical
-
-x = get_x()
-y = get_y()
+x = horizontal.replace(" ", "_").lower()
+y = vertical.replace(" ", "_").lower()
 
 fig = px.scatter(
     df,
